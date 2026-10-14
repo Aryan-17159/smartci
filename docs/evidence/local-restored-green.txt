@@ -1,0 +1,44 @@
+LOCAL VERIFICATION - not a GitHub Actions run
+Host: Windows; shell: Git Bash; runtime: isolated Python 3.12 environment
+Command: set -o pipefail; python -m pytest -v --color=no -p no:cacheprovider --junitxml=<local-report.xml> 2>&1 | tee <local-log>
+Absolute workspace paths are replaced with <project> or <workspace>.
+Process exit code: 0
+
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-8.4.2, pluggy-1.6.0 -- <workspace>\work\.venv\Scripts\python.exe
+rootdir: <project>
+configfile: pytest.ini
+testpaths: tests
+collecting ... collected 28 items
+
+tests/test_cart.py::test_total_with_discount PASSED                      [  3%]
+tests/test_cart.py::test_empty_cart PASSED                               [  7%]
+tests/test_cart.py::test_default_quantity PASSED                         [ 10%]
+tests/test_cart.py::test_multiple_items_and_quantities PASSED            [ 14%]
+tests/test_cart.py::test_full_discount PASSED                            [ 17%]
+tests/test_cart.py::test_invalid_discount_reaches_pricing_validation PASSED [ 21%]
+tests/test_cart.py::test_carts_have_independent_items PASSED             [ 25%]
+tests/test_cart.py::test_total_does_not_change_items PASSED              [ 28%]
+tests/test_inventory.py::test_add_stock PASSED                           [ 32%]
+tests/test_inventory.py::test_add_stock_accumulates PASSED               [ 35%]
+tests/test_inventory.py::test_remove_stock PASSED                        [ 39%]
+tests/test_inventory.py::test_remove_all_stock PASSED                    [ 42%]
+tests/test_inventory.py::test_removing_too_much_raises_and_preserves_stock PASSED [ 46%]
+tests/test_inventory.py::test_removing_missing_item_raises PASSED        [ 50%]
+tests/test_inventory.py::test_different_products_have_separate_stock PASSED [ 53%]
+tests/test_inventory.py::test_inventories_have_independent_stock PASSED  [ 57%]
+tests/test_pricing.py::test_discount_basic PASSED                        [ 60%]
+tests/test_pricing.py::test_discount_boundaries PASSED                   [ 64%]
+tests/test_pricing.py::test_discount_invalid[-1] PASSED                  [ 67%]
+tests/test_pricing.py::test_discount_invalid[-0.01] PASSED               [ 71%]
+tests/test_pricing.py::test_discount_invalid[100.01] PASSED              [ 75%]
+tests/test_pricing.py::test_discount_invalid[101] PASSED                 [ 78%]
+tests/test_pricing.py::test_discount_rounds_to_two_places PASSED         [ 82%]
+tests/test_pricing.py::test_discount_zero_price PASSED                   [ 85%]
+tests/test_pricing.py::test_tax_default PASSED                           [ 89%]
+tests/test_pricing.py::test_tax_custom_rate PASSED                       [ 92%]
+tests/test_pricing.py::test_tax_zero_rate PASSED                         [ 96%]
+tests/test_pricing.py::test_tax_rounds_to_two_places PASSED              [100%]
+
+- generated xml file: <workspace>\work\local-restored-green.xml -
+============================= 28 passed in 0.12s ==============================

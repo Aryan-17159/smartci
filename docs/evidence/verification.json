@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-14",
+  "execution": "local Windows with Git Bash; not GitHub-hosted",
+  "python": "3.12.10",
+  "pytest": "8.4.2",
+  "requests": "2.34.2",
+  "results": [
+    {
+      "label": "local-green",
+      "exit_code": 0,
+      "summary": "28 passed"
+    },
+    {
+      "label": "local-red",
+      "exit_code": 1,
+      "summary": "1 failed, 27 passed"
+    },
+    {
+      "label": "local-restored-green",
+      "exit_code": 0,
+      "summary": "28 passed"
+    }
+  ],
+  "failure_demo_restores_original_file": true,
+  "bash_pipefail_preserves_pytest_failure": true,
+  "test_pricing_sha256": "beec1b9cb28ef08706dfa261424de03b3f9684dad38fe5897711bd3025109dee"
+}

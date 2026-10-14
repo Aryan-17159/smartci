@@ -1,0 +1,9 @@
+LOCAL STATIC WORKFLOW VALIDATION - not a GitHub Actions run
+Date: 2026-10-14
+Tool: actionlint 1.7.12, official Windows amd64 release
+Command (from the project folder): actionlint -shellcheck="" -pyflakes="" .github/workflows/ci.yml
+Process exit code: 0
+Diagnostics: none
+
+Optional external ShellCheck and Pyflakes integrations were disabled.
+The real Bash test pipeline was separately exercised in the three pytest logs.
