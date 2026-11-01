@@ -1,3 +1,9 @@
+# SmartCI assignments 4.2–4.5
+
+Start with [the submission and step-by-step learning documents](docs/ASSIGNMENTS.md). Includes cache invalidation, dynamic test routing, real local LLM inference, and an explicitly synthetic failure-prediction experiment. Run: python -m pip install -r requirements.lock, then python -m pytest -q.
+
+---
+
 # SmartCI
 
 Completed source code for Labs 0-2 from the supplied `m4_0.pdf`: a small Python
@@ -7,9 +13,13 @@ shopping-cart application, pytest coverage, and a baseline GitHub Actions pipeli
 produces 1 failed and 27 passed; restoring the assertion returns all 28 to passing.
 Captured output is in [docs/evidence](docs/evidence).
 
-The project is ready to push. GitHub run URLs, timings, and screenshots must be
-collected from your repository after pushing; they are not included as completed
-GitHub evidence. See the [lab report](docs/LAB_REPORT.md).
+The project is published at [Aryan-17159/smartci](https://github.com/Aryan-17159/smartci).
+The actual GitHub experiment is complete: baseline green, intentional red, and
+corrected green runs are preserved in Actions. See the
+[lab report with screenshots](docs/LAB_REPORT.md) and
+[line-by-line workflow explanation](docs/WORKFLOW_EXPLANATION.md).
+The `lab2` checkpoint identifies the completed CI experiment. Copilot Chat's
+account setup currently blocks its own response; that limitation is documented.
 
 ## 1. Run locally
 
@@ -51,7 +61,7 @@ cart.add("pen", 50, 2)
 print(cart.total(discount=10))  # 106.2
 ```
 
-## 2. Push to GitHub
+## 2. Push a new copy to GitHub (optional)
 
 Create a new empty repository named **smartci** on GitHub. Do not initialize it
 with a README, license, or .gitignore. Run the following inside the extracted
@@ -78,7 +88,13 @@ Open the repository's **Actions** tab and wait for **CI** to finish. The **build
 job should pass its **Run tests** step. Record the run URL, total duration, and
 **Install dependencies** duration in [the lab report](docs/LAB_REPORT.md).
 
-## 3. Complete the red-run exercise
+## 3. Reproduce the completed red-run exercise (optional)
+
+The submitted experiment was performed on `main` and fixed. Its red run is
+[CI #2](https://github.com/Aryan-17159/smartci/actions/runs/38528095257), followed by
+[green CI #3](https://github.com/Aryan-17159/smartci/actions/runs/38528235235).
+The instructions below are for reproducing it in a fresh copy. Do not overwrite
+the existing `lab2` tag in the submitted repository.
 
 Start with a clean working tree and a successful CI run. Use a temporary branch
 so the exercise has a clear beginning and end. The commands below work in

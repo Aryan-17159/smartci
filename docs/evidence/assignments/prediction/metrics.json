@@ -1,0 +1,31 @@
+{
+  "data_provenance": [
+    "synthetic_seed_42"
+  ],
+  "warning": "Educational evaluation; synthetic-data metrics do not establish real CI reliability.",
+  "split": "Chronological first 80% train, final 20% test; no shuffled future data",
+  "train_count": 480,
+  "test_count": 120,
+  "threshold": 0.5,
+  "accuracy": 0.7833333333333333,
+  "precision": 0.5,
+  "recall": 0.19230769230769232,
+  "f1": 0.2777777777777778,
+  "roc_auc": 0.7741407528641571,
+  "brier_score": 0.1394817240354754,
+  "baseline_accuracy": 0.7833333333333333,
+  "confusion_matrix_labels": [
+    0,
+    1
+  ],
+  "confusion_matrix": [
+    [
+      89,
+      5
+    ],
+    [
+      21,
+      5
+    ]
+  ]
+}

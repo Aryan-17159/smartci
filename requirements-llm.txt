@@ -1,0 +1,4 @@
+# Install torch's CPU wheel first; see docs/assignments/4_4_log_summarization.md.
+torch==2.9.0
+transformers==4.57.1
+sentencepiece==0.2.1

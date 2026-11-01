@@ -12,3 +12,7 @@ test-results.xml
 !.env.example
 .DS_Store
 Thumbs.db
+.smartci/
+reports/
+models/
+.cache/

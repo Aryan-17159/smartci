@@ -1,0 +1,69 @@
+GitHub run: https://github.com/Aryan-17159/smartci/actions/runs/38528095257
+Job: 115733143363
+Excerpt of Run tests, preserving log timestamps.
+
+##[group]Run set -o pipefail
+2026-10-14T07:24:28.5977510Z [36;1mset -o pipefail[0m
+2026-10-14T07:24:28.5977821Z [36;1mpython -m pytest -v --junitxml=test-results.xml 2>&1 | tee build.log[0m
+2026-10-14T07:24:28.6036722Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-14T07:24:28.6037011Z env:
+2026-10-14T07:24:28.6037238Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-14T07:24:28.6037594Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+2026-10-14T07:24:28.6037928Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-14T07:24:28.6038259Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-14T07:24:28.6038562Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+2026-10-14T07:24:28.6038865Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+2026-10-14T07:24:28.6039124Z ##[endgroup]
+2026-10-14T07:24:29.4857328Z ============================= test session starts ==============================
+2026-10-14T07:24:29.4858129Z platform linux -- Python 3.12.15, pytest-8.4.2, pluggy-1.6.0 -- /opt/hostedtoolcache/Python/3.12.15/x64/bin/python
+2026-10-14T07:24:29.4858838Z cachedir: .pytest_cache
+2026-10-14T07:24:29.4859176Z rootdir: /home/runner/work/smartci/smartci
+2026-10-14T07:24:29.4859561Z configfile: pytest.ini
+2026-10-14T07:24:29.4859860Z testpaths: tests
+2026-10-14T07:24:29.5191053Z collecting ... collected 28 items
+2026-10-14T07:24:29.5191358Z 
+2026-10-14T07:24:29.5215610Z tests/test_cart.py::test_total_with_discount PASSED                      [  3%]
+2026-10-14T07:24:29.5222212Z tests/test_cart.py::test_empty_cart PASSED                               [  7%]
+2026-10-14T07:24:29.5227998Z tests/test_cart.py::test_default_quantity PASSED                         [ 10%]
+2026-10-14T07:24:29.5233689Z tests/test_cart.py::test_multiple_items_and_quantities PASSED            [ 14%]
+2026-10-14T07:24:29.5239788Z tests/test_cart.py::test_full_discount PASSED                            [ 17%]
+2026-10-14T07:24:29.5249239Z tests/test_cart.py::test_invalid_discount_reaches_pricing_validation PASSED [ 21%]
+2026-10-14T07:24:29.5255052Z tests/test_cart.py::test_carts_have_independent_items PASSED             [ 25%]
+2026-10-14T07:24:29.5262300Z tests/test_cart.py::test_total_does_not_change_items PASSED              [ 28%]
+2026-10-14T07:24:29.5268655Z tests/test_inventory.py::test_add_stock PASSED                           [ 32%]
+2026-10-14T07:24:29.5274678Z tests/test_inventory.py::test_add_stock_accumulates PASSED               [ 35%]
+2026-10-14T07:24:29.5280773Z tests/test_inventory.py::test_remove_stock PASSED                        [ 39%]
+2026-10-14T07:24:29.5286773Z tests/test_inventory.py::test_remove_all_stock PASSED                    [ 42%]
+2026-10-14T07:24:29.5293762Z tests/test_inventory.py::test_removing_too_much_raises_and_preserves_stock PASSED [ 46%]
+2026-10-14T07:24:29.5300137Z tests/test_inventory.py::test_removing_missing_item_raises PASSED        [ 50%]
+2026-10-14T07:24:29.5306241Z tests/test_inventory.py::test_different_products_have_separate_stock PASSED [ 53%]
+2026-10-14T07:24:29.5313146Z tests/test_inventory.py::test_inventories_have_independent_stock PASSED  [ 57%]
+2026-10-14T07:24:29.5319534Z tests/test_pricing.py::test_discount_basic PASSED                        [ 60%]
+2026-10-14T07:24:29.5458705Z tests/test_pricing.py::test_discount_boundaries FAILED                   [ 64%]
+2026-10-14T07:24:29.5465790Z tests/test_pricing.py::test_discount_invalid[-1] PASSED                  [ 67%]
+2026-10-14T07:24:29.5472749Z tests/test_pricing.py::test_discount_invalid[-0.01] PASSED               [ 71%]
+2026-10-14T07:24:29.5479836Z tests/test_pricing.py::test_discount_invalid[100.01] PASSED              [ 75%]
+2026-10-14T07:24:29.5486551Z tests/test_pricing.py::test_discount_invalid[101] PASSED                 [ 78%]
+2026-10-14T07:24:29.5492421Z tests/test_pricing.py::test_discount_rounds_to_two_places PASSED         [ 82%]
+2026-10-14T07:24:29.5499316Z tests/test_pricing.py::test_discount_zero_price PASSED                   [ 85%]
+2026-10-14T07:24:29.5504636Z tests/test_pricing.py::test_tax_default PASSED                           [ 89%]
+2026-10-14T07:24:29.5510625Z tests/test_pricing.py::test_tax_custom_rate PASSED                       [ 92%]
+2026-10-14T07:24:29.5516495Z tests/test_pricing.py::test_tax_zero_rate PASSED                         [ 96%]
+2026-10-14T07:24:29.5716354Z tests/test_pricing.py::test_tax_rounds_to_two_places PASSED              [100%]
+2026-10-14T07:24:29.5717380Z 
+2026-10-14T07:24:29.5718014Z =================================== FAILURES ===================================
+2026-10-14T07:24:29.5718741Z ___________________________ test_discount_boundaries ___________________________
+2026-10-14T07:24:29.5719307Z 
+2026-10-14T07:24:29.5719602Z     def test_discount_boundaries():
+2026-10-14T07:24:29.5720157Z >       assert apply_discount(100, 0) == 101.0
+2026-10-14T07:24:29.5720710Z E       assert 100.0 == 101.0
+2026-10-14T07:24:29.5721249Z E        +  where 100.0 = apply_discount(100, 0)
+2026-10-14T07:24:29.5721686Z 
+2026-10-14T07:24:29.5721996Z tests/test_pricing.py:11: AssertionError
+2026-10-14T07:24:29.5722719Z ---- generated xml file: /home/runner/work/smartci/smartci/test-results.xml ----
+2026-10-14T07:24:29.5723532Z =========================== short test summary info ============================
+2026-10-14T07:24:29.5724375Z FAILED tests/test_pricing.py::test_discount_boundaries - assert 100.0 == 101.0
+2026-10-14T07:24:29.5725088Z  +  where 100.0 = apply_discount(100, 0)
+2026-10-14T07:24:29.5725689Z ========================= 1 failed, 27 passed in 0.07s =========================
+2026-10-14T07:24:29.5920008Z ##[error]Process completed with exit code 1.
+2026-10-14T07:24:29.6041211Z 

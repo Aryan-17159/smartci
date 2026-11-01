@@ -1,0 +1,78 @@
+{
+  "pricing": {
+    "mode": "subset",
+    "reason": "Transitive static import dependencies",
+    "changed": [
+      "src/pricing.py"
+    ],
+    "tests": [
+      "tests/test_cart.py",
+      "tests/test_pricing.py"
+    ]
+  },
+  "inventory": {
+    "mode": "subset",
+    "reason": "Transitive static import dependencies",
+    "changed": [
+      "src/inventory.py"
+    ],
+    "tests": [
+      "tests/test_inventory.py"
+    ]
+  },
+  "test_only": {
+    "mode": "subset",
+    "reason": "Transitive static import dependencies",
+    "changed": [
+      "tests/test_cart.py"
+    ],
+    "tests": [
+      "tests/test_cart.py"
+    ]
+  },
+  "docs_only": {
+    "mode": "none",
+    "reason": "Documentation-only or empty diff",
+    "changed": [
+      "docs/notes.md"
+    ],
+    "tests": []
+  },
+  "dependencies": {
+    "mode": "full",
+    "reason": "Configuration, tooling, dependency, or unknown change: requirements.txt",
+    "changed": [
+      "requirements.txt"
+    ],
+    "tests": [
+      "tests/test_cart.py",
+      "tests/test_inventory.py",
+      "tests/test_pricing.py",
+      "tests/test_smartci.py"
+    ]
+  },
+  "deleted_source": {
+    "mode": "full",
+    "reason": "Deletion, package initializer, or fixture change: src/deleted.py",
+    "changed": [
+      "src/deleted.py"
+    ],
+    "tests": [
+      "tests/test_cart.py",
+      "tests/test_inventory.py",
+      "tests/test_pricing.py",
+      "tests/test_smartci.py"
+    ]
+  },
+  "unknown_base": {
+    "mode": "full",
+    "reason": "Full run requested or comparison base unavailable",
+    "changed": null,
+    "tests": [
+      "tests/test_cart.py",
+      "tests/test_inventory.py",
+      "tests/test_pricing.py",
+      "tests/test_smartci.py"
+    ]
+  }
+}

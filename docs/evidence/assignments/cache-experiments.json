@@ -1,0 +1,198 @@
+{
+  "cold": {
+    "environment": {
+      "schema": 1,
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "cache_tag": "cpython-312",
+      "platform": "Windows",
+      "machine": "AMD64"
+    },
+    "hits": 0,
+    "misses": 4,
+    "entries": [
+      {
+        "module": "src/__init__.py",
+        "key": "97d80ddc1ebf2befc504615f26f2b61250fb802f5b0cf06b0ea04ea2966e5ae5",
+        "status": "miss",
+        "dependencies": [
+          "src/__init__.py"
+        ]
+      },
+      {
+        "module": "src/cart.py",
+        "key": "cedc3bac96afc15aa0f6fc6e2fadf2c2dd30628d13af19ee5d7a4bdbf2dcdcf7",
+        "status": "miss",
+        "dependencies": [
+          "src/__init__.py",
+          "src/cart.py",
+          "src/pricing.py"
+        ]
+      },
+      {
+        "module": "src/inventory.py",
+        "key": "cd9b5d18193e4fb8be8a88d305717a44681aca336e45efef2236debd1adce9e1",
+        "status": "miss",
+        "dependencies": [
+          "src/__init__.py",
+          "src/inventory.py"
+        ]
+      },
+      {
+        "module": "src/pricing.py",
+        "key": "0aa890a65738129c5dd9713a81e923fb2ce6a5082b14934d7677f58ae7366bf9",
+        "status": "miss",
+        "dependencies": [
+          "src/__init__.py",
+          "src/pricing.py"
+        ]
+      }
+    ]
+  },
+  "warm": {
+    "environment": {
+      "schema": 1,
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "cache_tag": "cpython-312",
+      "platform": "Windows",
+      "machine": "AMD64"
+    },
+    "hits": 4,
+    "misses": 0,
+    "entries": [
+      {
+        "module": "src/__init__.py",
+        "key": "97d80ddc1ebf2befc504615f26f2b61250fb802f5b0cf06b0ea04ea2966e5ae5",
+        "status": "hit",
+        "dependencies": [
+          "src/__init__.py"
+        ]
+      },
+      {
+        "module": "src/cart.py",
+        "key": "cedc3bac96afc15aa0f6fc6e2fadf2c2dd30628d13af19ee5d7a4bdbf2dcdcf7",
+        "status": "hit",
+        "dependencies": [
+          "src/__init__.py",
+          "src/cart.py",
+          "src/pricing.py"
+        ]
+      },
+      {
+        "module": "src/inventory.py",
+        "key": "cd9b5d18193e4fb8be8a88d305717a44681aca336e45efef2236debd1adce9e1",
+        "status": "hit",
+        "dependencies": [
+          "src/__init__.py",
+          "src/inventory.py"
+        ]
+      },
+      {
+        "module": "src/pricing.py",
+        "key": "0aa890a65738129c5dd9713a81e923fb2ce6a5082b14934d7677f58ae7366bf9",
+        "status": "hit",
+        "dependencies": [
+          "src/__init__.py",
+          "src/pricing.py"
+        ]
+      }
+    ]
+  },
+  "pricing_changed": {
+    "environment": {
+      "schema": 1,
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "cache_tag": "cpython-312",
+      "platform": "Windows",
+      "machine": "AMD64"
+    },
+    "hits": 2,
+    "misses": 2,
+    "entries": [
+      {
+        "module": "src/__init__.py",
+        "key": "97d80ddc1ebf2befc504615f26f2b61250fb802f5b0cf06b0ea04ea2966e5ae5",
+        "status": "hit",
+        "dependencies": [
+          "src/__init__.py"
+        ]
+      },
+      {
+        "module": "src/cart.py",
+        "key": "ee48070289b2391d6ae3671b1619d4520dd8106b7b7f8e7ff84dbab8a0249eb3",
+        "status": "miss",
+        "dependencies": [
+          "src/__init__.py",
+          "src/cart.py",
+          "src/pricing.py"
+        ]
+      },
+      {
+        "module": "src/inventory.py",
+        "key": "cd9b5d18193e4fb8be8a88d305717a44681aca336e45efef2236debd1adce9e1",
+        "status": "hit",
+        "dependencies": [
+          "src/__init__.py",
+          "src/inventory.py"
+        ]
+      },
+      {
+        "module": "src/pricing.py",
+        "key": "2dbeff9e3647cdc61d6964216fcc04b7b7d0d807133fc3b8adafdc0d59c6637e",
+        "status": "miss",
+        "dependencies": [
+          "src/__init__.py",
+          "src/pricing.py"
+        ]
+      }
+    ]
+  },
+  "requirements_changed": {
+    "environment": {
+      "schema": 1,
+      "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+      "cache_tag": "cpython-312",
+      "platform": "Windows",
+      "machine": "AMD64"
+    },
+    "hits": 0,
+    "misses": 4,
+    "entries": [
+      {
+        "module": "src/__init__.py",
+        "key": "9f8cc96b4c22b5da839f1adf47927c549e4b5cb87778ad1e049ead1265b20951",
+        "status": "miss",
+        "dependencies": [
+          "src/__init__.py"
+        ]
+      },
+      {
+        "module": "src/cart.py",
+        "key": "75121b8e8f22c0ff01e8afa1f6c594a24054aeb8e7bb44b45a5edd88c42678db",
+        "status": "miss",
+        "dependencies": [
+          "src/__init__.py",
+          "src/cart.py",
+          "src/pricing.py"
+        ]
+      },
+      {
+        "module": "src/inventory.py",
+        "key": "460ab8a4a776eff93b162acd924b54020a35ac7949c3e1232ba1e5999cc557cb",
+        "status": "miss",
+        "dependencies": [
+          "src/__init__.py",
+          "src/inventory.py"
+        ]
+      },
+      {
+        "module": "src/pricing.py",
+        "key": "22f059c38ed8f50c9dbc9b409b4c5764d583ce16184c4d32cad1cbee3e0ac743",
+        "status": "miss",
+        "dependencies": [
+          "src/__init__.py",
+          "src/pricing.py"
+        ]
+      }
+    ]
+  }
+}

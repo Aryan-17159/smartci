@@ -1,0 +1,25 @@
+{
+  "schema": 1,
+  "provider": "local-llm",
+  "llm_used": true,
+  "facts": {
+    "status": "failure",
+    "failed_tests": [
+      "tests/test_pricing.py::test_discount_boundaries"
+    ],
+    "locations": [
+      "tests/test_pricing.py:11"
+    ],
+    "assertions": [
+      "100.0 == 101.0"
+    ],
+    "test_summary": "1 failed, 27 passed",
+    "evidence": "tests/test_inventory.py::test_inventories_have_independent_stock PASSED  [ 57%]\ntests/test_pricing.py::test_discount_basic PASSED                        [ 60%]\ntests/test_pricing.py::test_discount_boundaries FAILED                   [ 64%]\ntests/test_pricing.py::test_discount_invalid[-1] PASSED                  [ 67%]\ntests/test_pricing.py::test_discount_invalid[-0.01] PASSED               [ 71%]\ntests/test_pricing.py::test_discount_invalid[100.01] PASSED              [ 75%]\ntests/test_pricing.py::test_tax_zero_rate PASSED                         [ 96%]\ntests/test_pricing.py::test_tax_rounds_to_two_places PASSED              [100%]\n=================================== FAILURES ===================================\n___________________________ test_discount_boundaries ___________________________\ndef test_discount_boundaries():\n>       assert apply_discount(100, 0) == 101.0\nE       assert 100.0 == 101.0\nE        +  where 100.0 = apply_discount(100, 0)\ntests/test_pricing.py:11: AssertionError\n---- generated xml file: /home/runner/work/smartci/smartci/test-results.xml ----\n=========================== short test summary info ============================\nFAILED tests/test_pricing.py::test_discount_boundaries - assert 100.0 == 101.0\n+  where 100.0 = apply_discount(100, 0)\n========================= 1 failed, 27 passed in 0.07s =========================\n##[error]Process completed with exit code 1."
+  },
+  "notice": "Facts are extracted from logs. Model text is advisory and must be checked against evidence.",
+  "summary": "1 failed, 27 passed.",
+  "model": "google/flan-t5-small",
+  "model_revision": "0fc9ddf78a1e988dac52e2dac162b0ede4fd74ab",
+  "prompt_sha256": "406692b386be72e9f646299671b292c3587b080bb2e6f00dd910209763b4df50",
+  "input_truncated": false
+}

@@ -12,7 +12,8 @@ pytest caches, and generated CI logs. Empty folders are preserved with `.gitkeep
 A fresh Python 3.12 virtual environment was used for local verification.
 Installation and GitHub push commands are in the README. VS Code extension
 installation, Copilot sign-in, and GitHub authentication are user-account setup
-steps. An interactive Copilot session has not been recorded as completed.
+steps. Publishing is now complete. Copilot Chat was opened but account setup
+blocked a response; see the status below.
 
 ## Lab 1: Application and tests
 
@@ -94,31 +95,81 @@ the assertion mismatch `assert 100.0 == 101.0`, and ends with a failed-test summ
 and a nonzero exit-code message. The failed step and job have red status icons.
 The run summary's artifacts also provide `build.log` and `test-results.xml`.
 
-### Actual verification status
+### Completed GitHub experiment
 
-- Local normal run: **28 passed**, process exit code 0.
-- Local intentional failure: **1 failed, 27 passed**, process exit code 1.
-- Local restored run: **28 passed**, process exit code 0.
-- GitHub-hosted green and red runs: **pending the user's repository push**.
-- GitHub timings and screenshots: **pending those live runs**.
+Repository: [Aryan-17159/smartci](https://github.com/Aryan-17159/smartci) (private).
+All runs below occurred on 14 October 2026 on `main`.
 
-The saved local output is real test output. It is not GitHub-hosted execution
-evidence, and no GitHub screenshots or timing measurements have been invented.
+- [Baseline green CI #1](https://github.com/Aryan-17159/smartci/actions/runs/38527234943),
+  commit `a361669`: **28 passed**, total workflow duration **17s**.
+  The **Install dependencies** step displays **5s** in GitHub Actions.
+- [Intentional red CI #2](https://github.com/Aryan-17159/smartci/actions/runs/38528095257),
+  commit `94a47fd`: changed the expected boundary value from **100.0 to 101.0**.
+  **Run tests** failed with **1 failed, 27 passed**, exit code **1**. Duration: **18s**.
+- [Corrected green CI #3](https://github.com/Aryan-17159/smartci/actions/runs/38528235235),
+  commit `1fe7eb5`: restored **100.0**. **All 28 tests passed**. Duration: **15s**.
+- [Checkpoint tag: lab2](https://github.com/Aryan-17159/smartci/tree/lab2).
 
-## Complete after pushing
+The red run is preserved in history. The submitted source contains the correct
+assertion. The original local green/red/green runs are retained separately.
 
-Use the README's red-run exercise, then replace the following pending fields
-with values from your own repository:
+### Exact error location and diagnosis
 
-- Repository URL: pending
-- First green run URL: pending
-- First green run total duration: pending
-- Install dependencies step duration: pending
-- Intentional red run URL: pending
-- Restored green run URL: pending
-- Screenshot files: pending; see [capture instructions](screenshots/README.md)
+Open [the failed Run tests log](https://github.com/Aryan-17159/smartci/actions/runs/38528095257/job/115733143363#step:5:64).
+Navigate **Actions > CI > failed run #2 > build > Run tests**.
+The assertion is in **tests/test_pricing.py, line 11**, inside
+**test_discount_boundaries**. The function returned **100.0**, while the deliberately
+incorrect test expected **101.0**. The log shows **assert 100.0 == 101.0** and
+highlights **Process completed with exit code 1** below the failure summary.
 
-No baseline timing is claimed until it has been measured in GitHub Actions.
+The Upload test logs step still succeeds because it uses `if: always()`; that
+does not turn the failed job green. The Node.js deprecation warning and Ubuntu
+image notice are separate runner messages, also present in successful runs.
+They did not cause this red run.
+
+### Screenshots from the actual repository
+
+Baseline green run:
+
+![Baseline CI success and total duration](screenshots/01-baseline-green.jpg)
+
+Measured baseline installation duration:
+
+![Install dependencies took 5 seconds](screenshots/06-baseline-install-duration.jpg)
+
+Intentional red run:
+
+![Intentional CI failure](screenshots/02-red-run.jpg)
+
+Exact assertion failure and exit code:
+
+![Failed assertion at tests/test_pricing.py line 11](screenshots/03-red-error-log.jpg)
+
+Corrected green test output:
+
+![All 28 tests pass after the fix](screenshots/04-fixed-green-tests.jpg)
+
+Green, red, and corrected green runs together:
+
+![GitHub Actions history preserves both outcomes](screenshots/05-actions-history.jpg)
+
+### Saved logs and workflow explanation
+
+- [Actual failed Run tests log excerpt](evidence/github-red-run.txt)
+- [Actual corrected Run tests log excerpt](evidence/github-fixed-green.txt)
+- [Every nonblank workflow line explained](WORKFLOW_EXPLANATION.md)
+
+### Copilot Chat status
+
+Copilot Chat at `github.com/copilot` was opened for the requested explanation.
+GitHub displayed **Setting up your Copilot license** and **Please check back in a
+few minutes**. Skipping and closing the welcome setup failed to save; chat access
+remained blocked. No Copilot-authored answer is claimed. A complete independently
+written explanation and the ready-to-send prompt are in `WORKFLOW_EXPLANATION.md`.
+The remaining account-side action is to finish Copilot setup and submit the prompt
+once the service becomes available.
+
+![Copilot welcome setup blocking chat](screenshots/07-copilot-setup-blocked.jpg)
 
 ## References
 
