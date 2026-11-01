@@ -1,3 +1,5 @@
+> Update — 2026-11-01: Copilot Chat is now working. The requested prompt was submitted and the actual response is saved in [COPILOT_RESPONSE.md](COPILOT_RESPONSE.md). Earlier setup-blocker notes below are historical. The lab2 tag is now published.
+
 # Line-by-line CI workflow explanation
 
 Historical Lab 2 file: [ci.yml at the corrected checkpoint](https://github.com/Aryan-17159/smartci/blob/1fe7eb508b173511bed9f502c5fdbb534918ac31/.github/workflows/ci.yml). The current assignment workflow has additional steps.

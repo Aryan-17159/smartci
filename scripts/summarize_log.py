@@ -86,7 +86,9 @@ def main():
     result['input_truncated'] = size>2_000_000
     output=Path(args.output); output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(result, indent=2)+'\n', encoding='utf-8')
-    print(json.dumps(result, indent=2))
+    # Keep original evidence in the JSON artifact, but neutralize runner command
+    # markers when replaying historical logs to the live Actions console.
+    print(json.dumps(result, indent=2).replace('##[', '[log:').replace('::', ': :'))
 
 
 if __name__=='__main__':

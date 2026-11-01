@@ -1,3 +1,5 @@
+> Update — 2026-11-01: Copilot Chat is now working. The requested prompt was submitted and the actual response is saved in [docs/COPILOT_RESPONSE.md](docs/COPILOT_RESPONSE.md). Earlier setup-blocker notes below are historical. The lab2 tag is now published.
+
 # SmartCI assignments 4.2–4.5
 
 Start with [the submission and step-by-step learning documents](docs/ASSIGNMENTS.md). Includes cache invalidation, dynamic test routing, real local LLM inference, and an explicitly synthetic failure-prediction experiment. Run: python -m pip install -r requirements.lock, then python -m pytest -q.

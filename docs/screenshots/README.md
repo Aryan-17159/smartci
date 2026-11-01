@@ -10,3 +10,10 @@ screenshots, not simulated examples. See [the lab report](../LAB_REPORT.md).
 - `05-actions-history.jpg`: baseline green, intentional red, corrected green.
 - `06-baseline-install-duration.jpg`: baseline dependency installation, 5s.
 - `07-copilot-setup-blocked.jpg`: welcome setup blocks Copilot Chat.
+
+Captured on 2026-11-01:
+
+- 08-lab2-tag.jpg: published checkpoint tag.
+- 09-assignments-green.jpg: successful assignment CI run #4.
+- 10-updated-actions-history.jpg: historical red/green and new successful runs.
+- 11-copilot-response.jpg: actual completed Copilot explanation.

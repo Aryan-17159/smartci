@@ -21,3 +21,5 @@ Small models can omit causes or hallucinate. Keep exact log references, review m
 
 See the [official FLAN-T5 model card](https://huggingface.co/google/flan-t5-small). The workflow's deterministic summary is not described as LLM output.
 
+
+Remote verification: [manual CI run #6](https://github.com/Aryan-17159/smartci/actions/runs/41313368978) successfully installed and ran the pinned model, producing the same summary as local inference.

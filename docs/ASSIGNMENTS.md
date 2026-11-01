@@ -1,3 +1,5 @@
+> Update — 2026-11-01: Copilot Chat is now working. The requested prompt was submitted and the actual response is saved in [COPILOT_RESPONSE.md](COPILOT_RESPONSE.md). Earlier setup-blocker notes below are historical. The lab2 tag is now published.
+
 # Assignments 4.2–4.5: submission and learning record
 Repository: https://github.com/Aryan-17159/smartci
 
@@ -29,3 +31,5 @@ Automatic runs use explicitly labeled deterministic log extraction. A manual **A
 
 These historical runs had 28 tests; the extended project has 62. The original [line-by-line explanation](WORKFLOW_EXPLANATION.md) describes the historical Lab 2 workflow, not the expanded assignment workflow. Copilot licensing previously prevented an actual Copilot response; that limitation is documented rather than presenting an independently written explanation as Copilot output.
 
+
+See [final remote verification and screenshots](COMPLETION.md) and the [actual Copilot response](COPILOT_RESPONSE.md).

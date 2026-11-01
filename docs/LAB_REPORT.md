@@ -1,3 +1,5 @@
+> Update — 2026-11-01: Copilot Chat is now working. The requested prompt was submitted and the actual response is saved in [COPILOT_RESPONSE.md](COPILOT_RESPONSE.md). Earlier setup-blocker notes below are historical. The lab2 tag is now published.
+
 # SmartCI lab report
 
 Source: the user-supplied `m4_0.pdf`, three pages covering Labs 0, 1, and 2.
